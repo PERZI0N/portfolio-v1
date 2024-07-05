@@ -1,17 +1,16 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import styles from "./styles.module.css";
+import dick from "./image.jpeg";
 
 const Intro = () => {
   return (
-    <div
-      className={` font-ocr lg:max-w-[70%] h-[60vh]`}
-    >
-      <div className="flex  flex-col">
+    <div className={`font-ocr`}>
+      <div className="flex flex-col">
         <div
           className={`${styles.shadowbottom} flex justify-between p-5 shadow-white w-full md:w-full`}
         >
-          <div className="ml-[5rem]">
+          <div className="lg:ml-[5rem]">
             <div className="flex gap-2 items-baseline">
               <h1 className="text-[#d4d4d5] text-[1rem] md:text-[2rem]">
                 <strong>I'm</strong>
@@ -29,6 +28,9 @@ const Intro = () => {
               <strong>Contact me</strong>
             </button>
           </div>
+          {/* <div>
+            <img src={dick} alt="Vaidick" />
+          </div> */}
           <div className={`flex items-end justify-end pt-[25vh]`}>
             <div className="flex flex-col gap-4 justify-center">
               <svg width="10" height="100" xmlns="http://www.w3.org/2000/svg">
@@ -42,23 +44,32 @@ const Intro = () => {
                 />
               </svg>
               <div className="flex flex-col gap-4">
-                <a href="https://github.com/PERZI0N" target="_blank">
+                <a
+                  href="https://github.com/PERZI0N"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaGithub className="text-[#dfdfe0] text-xl" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/vaidik-chhirolya-1b8bb6168/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <FaLinkedin className="text-[#dfdfe0] text-xl" />
                 </a>
-                <a href="https://wa.me/09753964884" target="_blank">
+                <a
+                  href="https://wa.me/09753964884"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaWhatsapp className="text-[#dfdfe0] text-xl" />
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <div className="pl-[5rem] py-6 px-8">
+        <div className="py-6 md:px-8 px-4">
           <h1
             className="pb-2 font-bold text-[2.5rem] text-[#e4e4e4]"
             id="intro"

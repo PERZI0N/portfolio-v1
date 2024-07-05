@@ -1,5 +1,5 @@
-import React from 'react'
-import ProjectCard from './projectCard';
+import React, { useState } from "react";
+import ProjectCard from "./projectCard";
 
 const projects = [
   {
@@ -67,24 +67,38 @@ const projects = [
   },
 ];
 const Portfolio = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const toggleShowAll = () => {
+    setShowAll(!showAll);
+  };
+
+  const displayedProjects = showAll ? projects : projects.slice(0, 3);
   return (
-    <div className="m-8 font-serif lg:mx-[10rem] flex flex-col gap-6 " id='portfolio'>
+    <div className="m-8 font-serif flex flex-col gap-6" id="portfolio">
       <h1 className="text-[#e4e4e4] text-[2rem] pl-8 items-center justify-center">
         PORTFOLIO
       </h1>
-      {projects.map((project) => (
-        <div>
-          <ProjectCard
-            name={project.name}
-            link={project.link}
-            point1={project.point1}
-            point2={project.point2}
-            stack={project.stack}
-          />
-        </div>
+      {displayedProjects.map((project, index) => (
+        <ProjectCard
+          key={index}
+          name={project.name}
+          link={project.link}
+          point1={project.point1}
+          point2={project.point2}
+          stack={project.stack}
+        />
       ))}
+      {projects.length > 3 && (
+        <button
+          onClick={toggleShowAll}
+          className="mt-4 rounded-md p-2 border-2 border-[#f2c979] text-lg text-[#f2c979] items-center justify-center hover:bg-[#f2c979] hover:text-[#5a4c23] w-[10rem] mx-auto"
+        >
+          {showAll ? "Show Less" : "Read More"}
+        </button>
+      )}
     </div>
   );
-}
+};
 
-export default Portfolio
+export default Portfolio;

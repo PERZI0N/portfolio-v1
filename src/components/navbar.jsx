@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
-import logo from "./logo.png"
-import "../App.css"
+import logo from "./logo.png";
+import "../App.css";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -13,13 +13,13 @@ const Navbar = () => {
 
   return (
     <div className="relative flex pb-8 flex-col items-center pt-4 w-full">
-      <div className="flex justify-between items-center w-full px-[5rem]">
+      <div className="flex justify-between items-center w-full px-4 lg:px-[5rem]">
         <img src={logo} alt="logo" height={30} width={100} />
         <div className="hidden md:flex gap-8 text-xl">
           <ScrollLink
             to="about"
             smooth={true}
-            duration={500} // Adjust scroll duration (optional)
+            duration={500}
             className="text-[#525357] font-bold hover:text-white"
           >
             About
@@ -72,7 +72,7 @@ const Navbar = () => {
           <ScrollLink
             to="about"
             smooth={true}
-            duration={500} // Adjust scroll duration (optional)
+            duration={500}
             className="text-[#525357] font-bold hover:text-white"
           >
             About

@@ -31,9 +31,9 @@ const data = [
 
 const Skills = () => {
   return (
-    <div className="skills-container ">
+    <div className="skills-container">
       <div className="skills-header">
-        <h1 className="skills-title pt-[15rem] md:pt-[4rem] lg:pt-[3rem]">
+        <h1 className="skills-title pt-[2rem]">
           <strong>My Skills</strong>
         </h1>
       </div>
