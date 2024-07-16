@@ -8,8 +8,8 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const ContactMe = () => {
   return (
-    <div className=" py-8 my-12" id="contact">
-      <div className="flex bg-second items-center font-serif justify-center">
+    <div className="py-8 my-12" id="contact">
+      <div className="flex rounded-t-2xl bg-second items-center font-serif justify-center">
         <div className=" border-x-6 border border-third mr-2 md:w-[40rem] w-[25vh]" />
         <h1 className="text-third text-[1.5rem] text-center font-bold">
           Contact Me
@@ -37,7 +37,7 @@ const ContactMe = () => {
           </h1>{" "}
         </div>
       </div>
-      <div className="flex bg-second pb-4 items-center font-serif justify-center">
+      <div className="flex rounded-b-2xl bg-second pb-4 items-center font-serif justify-center">
         <div className=" border-x-8 border border-third mr-2 w-[40vh]" />
         <h1 className="text-white flex gap-3 text-[1.5rem] font-bold">
           <a
@@ -67,8 +67,10 @@ const ContactMe = () => {
         </h1>
         <div className="bg-second border-x-8 border border-third ml-2  w-[40vh]" />
       </div>
-      <div className="flex  text-[3rem] justify-center items-center h-[20vh] text-third">
-        <h1 className="font-serif">"Thank You for scrolling"</h1>
+      <div className="flex  text-[2rem] justify-center items-center h-[20vh] text-third">
+        <h1 className="font-serif">
+          “Work smart. Get things done. No nonsense.” -Susan Wojcicki
+        </h1>
       </div>
     </div>
   );

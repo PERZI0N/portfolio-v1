@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import styles from "./styles.module.css";
 import dick from "./image.jpeg";
+import { Link as ScrollLink } from "react-scroll";
 
 const Intro = () => {
   return (
@@ -24,11 +25,22 @@ const Intro = () => {
             </h1>
             <div className="flex gap-4">
               <button className="mt-4 rounded-md p-2 border-2 border-third text-lg text-third items-center justify-center hover:bg-second hover:text-fourth">
-                <strong>Contact me</strong>
+                <ScrollLink
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  className="text-third font-bold hover:text-fourth"
+                >
+                  Contact
+                </ScrollLink>
               </button>
               <button className="mt-4 px-6 rounded-md p-2 border-2 border-third text-lg text-third items-center justify-center hover:bg-second hover:text-fourth">
-                <a href="https://drive.google.com/file/d/1s_1hcZAptcqRNxmNRQI7-r2hr6rJ-ECr/view?usp=drive_link"></a>
-                <strong>Resume</strong>
+                <a
+                  href="https://drive.google.com/file/d/1s_1hcZAptcqRNxmNRQI7-r2hr6rJ-ECr/view?usp=drive_link"
+                  target="_blank"
+                >
+                  <strong>Resume</strong>
+                </a>
               </button>
             </div>
           </div>
