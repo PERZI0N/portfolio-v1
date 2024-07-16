@@ -22,13 +22,16 @@ const Intro = () => {
             <h1 className="text-[#d4d4d5] text-[1rem] md:text-[2rem]">
               <strong>Full Stack Web Developer</strong>
             </h1>
-            <button className="mt-4 rounded-md p-2 border-2 border-third text-lg text-third items-center justify-center hover:bg-secondary hover:text-fourth">
-              <strong>Contact me</strong>
-            </button>
+            <div className="flex gap-4">
+              <button className="mt-4 rounded-md p-2 border-2 border-third text-lg text-third items-center justify-center hover:bg-second hover:text-fourth">
+                <strong>Contact me</strong>
+              </button>
+              <button className="mt-4 px-6 rounded-md p-2 border-2 border-third text-lg text-third items-center justify-center hover:bg-second hover:text-fourth">
+                <a href="https://drive.google.com/file/d/1s_1hcZAptcqRNxmNRQI7-r2hr6rJ-ECr/view?usp=drive_link"></a>
+                <strong>Resume</strong>
+              </button>
+            </div>
           </div>
-          {/* <div>
-            <img src={dick} alt="Vaidick" />
-          </div> */}
           <div className={`flex items-end justify-end pt-[25vh]`}>
             <div className="flex flex-col gap-4 justify-center">
               <svg width="10" height="100" xmlns="http://www.w3.org/2000/svg">
@@ -68,10 +71,7 @@ const Intro = () => {
           </div>
         </div>
         <div className="py-6 md:px-8 px-4">
-          <h1
-            className="pb-2 font-bold text-[2.5rem] text-[#e4e4e4]"
-            id="intro"
-          >
+          <h1 className="pb-2 font-bold text-[2.5rem] text-third" id="intro">
             About
           </h1>
           <div>
@@ -81,7 +81,7 @@ const Intro = () => {
                 y1="1"
                 x2="80"
                 y2="1"
-                stroke="#e1bc73"
+                stroke="#B55400"
                 stroke-width="2"
               />
             </svg>
@@ -94,7 +94,7 @@ const Intro = () => {
               a contributor on various projects online. I have also worked as a
               deep learning research intern at IISc banglore, where I worked
               exclusively in the field of GANs. I am{" "}
-              <span className="text-[#b39f76]">
+              <span className="text-third">
                 trustworthy, creative, and an effective conmmunicator.
               </span>{" "}
               I fondly anticipate working in a challenging yet rewarding

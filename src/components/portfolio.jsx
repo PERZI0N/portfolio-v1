@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import ProjectCard from "./projectCard";
+import "./embla.css";
 
 const projects = [
   {
@@ -24,6 +27,7 @@ const projects = [
     point1: "Created a website for a client ",
     point2: "sample",
     stack: "NextJS, Flask, MongoDB, Tailwind",
+    image: "../assets/projects/github.png",
   },
   {
     name: "BSR Lawfirm",
@@ -31,6 +35,7 @@ const projects = [
     point1: "Created a website for a client ",
     point2: "sample",
     stack: "React, Astro, Bootstrap",
+    image: "../assets/projects/github.png",
   },
   {
     name: "3D portfolio",
@@ -38,6 +43,7 @@ const projects = [
     point1: "Created a website for a client ",
     point2: "sample",
     stack: "React, Three JS, Bootstrap",
+    image: "../assets/projects/github.png",
   },
   {
     name: "CSMT",
@@ -45,6 +51,7 @@ const projects = [
     point1: "Created a website for a client ",
     point2: "sample",
     stack: "React, Tailwind",
+    image: "../assets/projects/github.png",
   },
   {
     name: "Next  consult",
@@ -52,6 +59,7 @@ const projects = [
     point1: "Created a website for a client ",
     point2: "sample",
     stack: "React, Tailwind",
+    image: "../assets/projects/github.png",
   },
   {
     name: "Fake ID detection",
@@ -59,6 +67,7 @@ const projects = [
     point1: "Created a website for a client ",
     point2: "sample",
     stack: "NextJS, Google oauth, Tailwind, MetaAPI",
+    image: "../assets/projects/github.png",
   },
   {
     name: "AlphaAR",
@@ -66,40 +75,80 @@ const projects = [
     point1: "Created a website for a client ",
     point2: "sample",
     stack: "ARJS, HTML, CSS",
+    image: "../assets/projects/github.png",
   },
 ];
+
 const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, skipSnaps: false },
+    [Autoplay({ delay: 2000 })]
+  );
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap());
+    };
+    emblaApi.on("select", onSelect);
+    return () => emblaApi.off("select", onSelect);
+  }, [emblaApi]);
+
+  const goToSlide = (index) => {
+    if (emblaApi) emblaApi.scrollTo(index);
+  };
 
   const toggleShowAll = () => {
     setShowAll(!showAll);
   };
 
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
+
   return (
     <div className="m-8 font-serif flex flex-col gap-6" id="portfolio">
-      <h1 className="text-[#e4e4e4] text-[2rem] pl-8 items-center justify-center">
+      <h1 className="text-third text-[2rem] pl-8 items-center justify-center">
         PORTFOLIO
       </h1>
-      {displayedProjects.map((project, index) => (
-        <ProjectCard
-          key={index}
-          name={project.name}
-          link={project.link}
-          point1={project.point1}
-          point2={project.point2}
-          stack={project.stack}
-          image={project.image}
-        />
-      ))}
-      {projects.length > 3 && (
+      <div className="embla">
+        <div className="embla__viewport" ref={emblaRef}>
+          <div className="embla__container">
+            {projects.map((project, index) => (
+              <div className="embla__slide" key={index}>
+                <ProjectCard
+                  name={project.name}
+                  link={project.link}
+                  point1={project.point1}
+                  point2={project.point2}
+                  stack={project.stack}
+                  image={project.image}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="embla__dots">
+        {projects.map((_, index) => (
+          <button
+            key={index}
+            className={`embla__dot ${
+              index === selectedIndex ? "is-selected" : ""
+            }`}
+            onClick={() => goToSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+      {/* {projects.length > 3 && (
         <button
           onClick={toggleShowAll}
           className="mt-4 rounded-md p-2 border-2 border-third text-lg text-[#f2c979] items-center justify-center hover:bg-[#f2c979] hover:text-[#5a4c23] w-[10rem] mx-auto"
         >
           {showAll ? "Show Less" : "Read More"}
         </button>
-      )}
+      )} */}
     </div>
   );
 };

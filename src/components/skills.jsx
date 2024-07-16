@@ -34,7 +34,7 @@ const Skills = () => {
     <div className="skills-container">
       <div className="skills-header">
         <h1 className="skills-title pt-[2rem]">
-          <strong>My Skills</strong>
+          <strong className="text-third">My Skills</strong>
         </h1>
       </div>
       <div className="skills-grid ">
