@@ -15,16 +15,14 @@ const Intro = () => {
               <h1 className="text-[#d4d4d5] text-[1rem] md:text-[2rem]">
                 <strong>I'm</strong>
               </h1>
-              <h1
-                className={`text-[#f2c979] md:text-[3rem] text-[2rem] font-ocr`}
-              >
+              <h1 className={`text-third md:text-[3rem] text-[2rem] font-ocr`}>
                 <strong> Vaidik Chhirolya</strong>
               </h1>
             </div>
             <h1 className="text-[#d4d4d5] text-[1rem] md:text-[2rem]">
               <strong>Full Stack Web Developer</strong>
             </h1>
-            <button className="mt-4 rounded-md p-2 border-2 border-[#f2c979] text-lg text-[#f2c979] items-center justify-center hover:bg-[#f2c979] hover:text-[#5a4c23]">
+            <button className="mt-4 rounded-md p-2 border-2 border-third text-lg text-third items-center justify-center hover:bg-secondary hover:text-fourth">
               <strong>Contact me</strong>
             </button>
           </div>
@@ -39,7 +37,7 @@ const Intro = () => {
                   y1="0"
                   x2="5"
                   y2="100"
-                  stroke="#e1bc73"
+                  stroke="#B55400"
                   stroke-width="2"
                 />
               </svg>

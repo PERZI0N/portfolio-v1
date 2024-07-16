@@ -10,7 +10,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="bg-black p-2 border-[#574f3c] border-8">
+    <div className="bg-primary p-2 border-[#574f3c] border-8">
       <div className="container">
         <Navbar />
         <Intro />

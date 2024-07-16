@@ -8,6 +8,7 @@ const projects = [
     point1: "Created a website for a client ",
     point2: "sample",
     stack: "React, Flask, Tailwind, FireBase Auth, Restful",
+    image: "./logo.png",
   },
   {
     name: "Youtube Clone",
@@ -15,6 +16,7 @@ const projects = [
     point1: "Created a website for a client ",
     point2: "sample",
     stack: "React, Rapid API, Tailwind",
+    image: "../assets/projects/github.png",
   },
   {
     name: "Stock Portfolio",
@@ -87,12 +89,13 @@ const Portfolio = () => {
           point1={project.point1}
           point2={project.point2}
           stack={project.stack}
+          image={project.image}
         />
       ))}
       {projects.length > 3 && (
         <button
           onClick={toggleShowAll}
-          className="mt-4 rounded-md p-2 border-2 border-[#f2c979] text-lg text-[#f2c979] items-center justify-center hover:bg-[#f2c979] hover:text-[#5a4c23] w-[10rem] mx-auto"
+          className="mt-4 rounded-md p-2 border-2 border-third text-lg text-[#f2c979] items-center justify-center hover:bg-[#f2c979] hover:text-[#5a4c23] w-[10rem] mx-auto"
         >
           {showAll ? "Show Less" : "Read More"}
         </button>

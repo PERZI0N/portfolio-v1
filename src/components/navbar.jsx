@@ -20,7 +20,7 @@ const Navbar = () => {
             to="about"
             smooth={true}
             duration={500}
-            className="text-[#525357] font-bold hover:text-white"
+            className="text-third font-bold hover:text-fourth"
           >
             About
           </ScrollLink>
@@ -28,7 +28,7 @@ const Navbar = () => {
             to="portfolio"
             smooth={true}
             duration={500}
-            className="text-[#525357] font-bold hover:text-white"
+            className="text-third font-bold hover:text-fourth"
           >
             Portfolio
           </ScrollLink>
@@ -36,7 +36,7 @@ const Navbar = () => {
             to="experience"
             smooth={true}
             duration={500}
-            className="text-[#525357] font-bold hover:text-white"
+            className="text-third font-bold hover:text-fourth"
           >
             Experience
           </ScrollLink>
@@ -44,20 +44,20 @@ const Navbar = () => {
             to="contact"
             smooth={true}
             duration={500}
-            className="text-[#525357] font-bold hover:text-white"
+            className="text-third font-bold hover:text-fourth"
           >
             Contact
           </ScrollLink>
         </div>
-        <div className="hidden md:flex items-center relative">
+        {/* <div className="hidden md:flex items-center relative">
           <IoMdSearch className="absolute left-3 text-gray-400" />
           <input
             type="text"
-            className="p-2 pl-10 rounded bg-[#3d3e42] w-[15vh] text-white focus:outline-none focus:bg-gray-600"
+            className="p-2 pl-10 rounded bg-[#3d3e42] w-[15vh] text-fourth focus:outline-none focus:bg-gray-600"
             placeholder="Search..."
           />
-        </div>
-        <div className="md:hidden flex items-center text-white">
+        </div> */}
+        <div className="md:hidden flex items-center text-fourth">
           <button onClick={toggleMenu} className="focus:outline-none">
             {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
@@ -73,7 +73,7 @@ const Navbar = () => {
             to="about"
             smooth={true}
             duration={500}
-            className="text-[#525357] font-bold hover:text-white"
+            className="text-third font-bold hover:text-fourth"
           >
             About
           </ScrollLink>
@@ -81,7 +81,7 @@ const Navbar = () => {
             to="portfolio"
             smooth={true}
             duration={500}
-            className="text-[#525357] font-bold hover:text-white"
+            className="text-third font-bold hover:text-fourth"
           >
             Portfolio
           </ScrollLink>
@@ -90,7 +90,7 @@ const Navbar = () => {
             to="experience"
             smooth={true}
             duration={500}
-            className="text-[#525357] font-bold hover:text-white"
+            className="text-third font-bold hover:text-fourth"
           >
             Experience
           </ScrollLink>
@@ -98,15 +98,15 @@ const Navbar = () => {
             to="contact"
             smooth={true}
             duration={500}
-            className="text-[#525357] font-bold hover:text-white"
+            className="text-third font-bold hover:text-fourth"
           >
             Contact
           </ScrollLink>
-          <input
+          {/* <input
             type="text"
-            className="p-2 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:bg-gray-600 w-11/12"
+            className="p-2 rounded bg-gray-700 text-fourth placeholder-gray-400 focus:outline-none focus:bg-gray-600 w-11/12"
             placeholder="Search..."
-          />
+          /> */}
         </div>
       )}
     </div>

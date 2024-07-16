@@ -63,10 +63,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #faf9f6;
+  background-color: #393E46;
   padding: 1rem;
   border-radius: 0.5rem;
-  color: black;
+  color: #B55400;
 }
 
 .card-back {

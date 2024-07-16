@@ -3,7 +3,7 @@ import { TbPointFilled } from "react-icons/tb";
 
 const Experience = () => {
   return (
-    <div className="p-8 bg-[#0f0f0f] font-serif lg:mx-[10rem] text-white" id="experience">
+    <div className="p-8 bg-secondary font-serif lg:mx-[10rem] text-white" id="experience">
       <h2 className="text-3xl font-bold mb-6">Experience</h2>
       <div className="space-y-8">
         <div className="flex pb-6">
