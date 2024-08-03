@@ -107,8 +107,8 @@ const Portfolio = () => {
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
 
   return (
-    <div className="m-8 font-serif flex flex-col gap-6" id="portfolio">
-      <h1 className="text-third text-[2rem] pl-8 items-center justify-center">
+    <div className="m-4 sm:m-8 font-serif flex flex-col gap-6" id="portfolio">
+      <h1 className="text-third text-2xl sm:text-[2rem] pl-4 sm:pl-8 items-center justify-center">
         PORTFOLIO
       </h1>
       <div className="embla">
@@ -129,7 +129,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      <div className="embla__dots">
+      <div className="embla__dots flex justify-center mt-4">
         {projects.map((_, index) => (
           <button
             key={index}
@@ -141,14 +141,14 @@ const Portfolio = () => {
           />
         ))}
       </div>
-      {/* {projects.length > 3 && (
+      {projects.length > 3 && (
         <button
           onClick={toggleShowAll}
-          className="mt-4 rounded-md p-2 border-2 border-third text-lg text-[#f2c979] items-center justify-center hover:bg-[#f2c979] hover:text-[#5a4c23] w-[10rem] mx-auto"
+          className="mt-4 rounded-md p-2 border-2 border-third text-lg text-[#f2c979] items-center justify-center hover:bg-[#f2c979] hover:text-[#5a4c23] w-40 mx-auto"
         >
           {showAll ? "Show Less" : "Read More"}
         </button>
-      )} */}
+      )}
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { TbPointFilled } from "react-icons/tb";
 
 const ProjectCard = ({ name, link, point1, point2, stack, image }) => {
   return (
-    <div className="flex flex-col w-full h-full  rounded-lg overflow-hidden shadow-lg bg-second text-fourth">
+    <div className="flex flex-col w-full h-full rounded-lg overflow-hidden shadow-lg bg-second text-fourth">
       {image && (
         <img
           src={image}
@@ -19,20 +19,20 @@ const ProjectCard = ({ name, link, point1, point2, stack, image }) => {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white"
+            className="hover:text-white break-all"
           >
             {name}
           </a>
           <MdArrowOutward />
         </div>
-        <div className="text-white mt-2 mb-4">{stack}</div>
+        <div className="text-white mt-2 mb-4 break-words">{stack}</div>
         <div className="flex text-[#e4e4e4] mb-2">
           <TbPointFilled className="mt-1 mr-1" />
-          <p>{point1}</p>
+          <p className="break-words">{point1}</p>
         </div>
         <div className="flex text-[#e4e4e4]">
           <TbPointFilled className="mt-1 mr-1" />
-          <p>{point2}</p>
+          <p className="break-words">{point2}</p>
         </div>
       </div>
     </div>

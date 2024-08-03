@@ -37,8 +37,8 @@
 
 .card {
   perspective: 1000px;
-  width: 20vh;
-  height: 20vh;
+  width: 15vh;
+  height: 15vh;
 }
 
 .card-inner {
