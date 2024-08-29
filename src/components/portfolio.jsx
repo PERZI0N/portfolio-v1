@@ -6,85 +6,111 @@ import "./embla.css";
 
 const projects = [
   {
+    name: "Event Management System",
+    link: "https://github.com/PERZI0N/eventBooking",
+    point1:
+      "Created a full stack event management system to allow people to book tickets and do all the CRUD operations to it.",
+    point2:
+      "The app uses MongoDB to store all the data and the whole app follows the MVC architecture.",
+    stack: "React, Node, Tailwind, FireBase Auth, Restful",
+    image: "./github.png",
+  },
+  {
     name: "IQSPL",
     link: "https://www.iqspl.com/",
-    point1: "Created a website for a client ",
-    point2: "sample",
+    point1:
+      "Developed the complete website for Intelligent Quotient System Pvt Ltd.",
+    point2:
+      "Utilized a diverse tech stack to ensure maximum responsiveness and simplicity in design.",
     stack: "React, Flask, Tailwind, FireBase Auth, Restful",
     image: "./logo.png",
   },
   {
     name: "Youtube Clone",
     link: "https://stirring-twilight-bfdfe2.netlify.app/",
-    point1: "Created a website for a client ",
-    point2: "sample",
+    point1:
+      "Created a YouTube clone as a project to gain proficiency with Rapid API.",
+    point2:
+      "Implemented best practices to achieve a responsive and fast-loading website.",
     stack: "React, Rapid API, Tailwind",
-    image: "../assets/projects/github.png",
+    image: "./github.png",
   },
   {
     name: "Stock Portfolio",
     link: "https://github.com/PERZI0N/nextStocks",
-    point1: "Created a website for a client ",
-    point2: "sample",
+    point1:
+      "Developed a customized stock portfolio tracker using YFinance API for real-time data.",
+    point2:
+      "Integrated features for latest price updates, daily news, and portfolio management, adhering to proper database practices.",
     stack: "NextJS, Flask, MongoDB, Tailwind",
     image: "../assets/projects/github.png",
   },
   {
     name: "BSR Lawfirm",
     link: "https://bsrlawfirm.in/",
-    point1: "Created a website for a client ",
-    point2: "sample",
+    point1: "Created the landing page for a law firm.",
+    point2:
+      "Optimized for speed and responsiveness, ensuring seamless performance by following best practices.",
     stack: "React, Astro, Bootstrap",
     image: "../assets/projects/github.png",
   },
   {
-    name: "3D portfolio",
+    name: "3D Portfolio",
     link: "https://64ec957921896e0aa3b82aff--meek-babka-7e7f96.netlify.app/",
-    point1: "Created a website for a client ",
-    point2: "sample",
+    point1:
+      "Designed a portfolio using Three.js to work with 3D models and understand GLTF models.",
+    point2:
+      "Implemented state management practices to enhance the aesthetic quality of animations.",
     stack: "React, Three JS, Bootstrap",
     image: "../assets/projects/github.png",
   },
   {
     name: "CSMT",
     link: "",
-    point1: "Created a website for a client ",
-    point2: "sample",
+    point1:
+      "Developed a landing page for Chatrapitaji Shivaji Terminal Station upon government request.",
+    point2: "Focused on creating a simple and optimized frontend.",
     stack: "React, Tailwind",
     image: "../assets/projects/github.png",
   },
   {
-    name: "Next  consult",
+    name: "Next Consult",
     link: "",
-    point1: "Created a website for a client ",
-    point2: "sample",
+    point1: "Created the landing page for a consulting firm.",
+    point2:
+      "Ensured a fast, responsive, and optimized website by following best practices.",
     stack: "React, Tailwind",
     image: "../assets/projects/github.png",
   },
   {
-    name: "Fake ID detection",
+    name: "Fake ID Detection",
     link: "https://github.com/PERZI0N/Police",
-    point1: "Created a website for a client ",
-    point2: "sample",
-    stack: "NextJS, Google oauth, Tailwind, MetaAPI",
+    point1:
+      "Developed a solution using Google Auth and Next.js integrated with a machine learning model to identify fake Instagram accounts.",
+    point2:
+      "Followed best practices in Next.js for proper routing while maintaining lightweight performance.",
+    stack: "NextJS, Google OAuth, Tailwind, MetaAPI",
     image: "../assets/projects/github.png",
   },
   {
     name: "AlphaAR",
     link: "https://github.com/PERZI0N/AlphaAR",
-    point1: "Created a website for a client ",
-    point2: "sample",
+    point1:
+      "Pioneered the creation of AlphaAR to assist young dyslexic children in learning and practicing English phonetics.",
+    point2:
+      "Officially published in IEEE Xplore at the IConscEPT conference 2024.",
     stack: "ARJS, HTML, CSS",
     image: "../assets/projects/github.png",
   },
 ];
+
 
 const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, skipSnaps: false },
-    [Autoplay({ delay: 2000 })]
+    [Autoplay({ delay: 3500 })]
   );
 
   useEffect(() => {
@@ -100,14 +126,9 @@ const Portfolio = () => {
     if (emblaApi) emblaApi.scrollTo(index);
   };
 
-  const toggleShowAll = () => {
-    setShowAll(!showAll);
-  };
-
-  const displayedProjects = showAll ? projects : projects.slice(0, 3);
 
   return (
-    <div className="m-4 sm:m-8 font-serif flex flex-col gap-6" id="portfolio">
+    <div className="m-4 sm:m-8 py-[4rem] font-serif flex flex-col gap-6" id="portfolio">
       <h1 className="text-third text-2xl sm:text-[2rem] pl-4 sm:pl-8 items-center justify-center">
         PORTFOLIO
       </h1>
@@ -141,14 +162,6 @@ const Portfolio = () => {
           />
         ))}
       </div>
-      {projects.length > 3 && (
-        <button
-          onClick={toggleShowAll}
-          className="mt-4 rounded-md p-2 border-2 border-third text-lg text-[#f2c979] items-center justify-center hover:bg-[#f2c979] hover:text-[#5a4c23] w-40 mx-auto"
-        >
-          {showAll ? "Show Less" : "Read More"}
-        </button>
-      )}
     </div>
   );
 };
